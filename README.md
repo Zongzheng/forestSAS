@@ -6,7 +6,7 @@ In recent years, there has been considerable interest in a group of neighborhood
 
 ## Installation
 
-the development version from github:
+The development version from github:
 
 ```R
 # install.packages("devtools")
