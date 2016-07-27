@@ -1,7 +1,7 @@
 \name{list_to_matrix}
 \alias{list_to_matrix}
 \title{
-A R function for converting list to  matrix
+Converting list to  matrix
 }
 \description{
 Converting the data with class list to  the data with class matrix

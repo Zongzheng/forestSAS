@@ -65,7 +65,7 @@ Given a marked point pattern dataset X this function computes, for each desired 
 package spatstat
 }
 \value{
-multiple "nnmarks" are the selected marks (smark) of nearest neighbour
+Multiple "nnmarks" are the selected marks (smark) of nearest neighbour
 nnid is the id of nearest neighbour
 nndist is the distance of nearest neighbour
 data is the final point pattern
@@ -74,27 +74,30 @@ data is the final point pattern
 Zongzheng Chai, chaizz@126.com
 }
 \seealso{
-the function "nnmark" in the package spatstat
+The function "nnmark" in the package spatstat
 }
 \examples{
+data(finpines)
 #### Based on specific number (N=4) of nearest neighbour####
 ## Basic usage
-nndN<-nnIndex(finpines,N=4,smark="diameter",buffer=TRUE,buf.xwid =2,buf.ywid=3)
+nndN<-nnIndex(finpines,id=paste("T",1:126,sep=""),N=4,smark="diameter",buffer=TRUE,buf.xwid =2,buf.ywid=3)
 nndN
-nndhN<-nnIndex(finpines,N=4,smark=c("diameter","height"),buffer=TRUE,buf.xwid =2,buf.ywid=3)
-nndN
+nndhN<-nnIndex(finpines,id=paste("T",1:126,sep=""),N=4,smark=c("diameter","height"),buffer=TRUE,buf.xwid =2,buf.ywid=3)
+nndhN
 
 # Only the points in the core zone (Removed the points in the buffer zone)
-nndN_core<-nnIndex(finpines,N=4,smark="diameter",buffer=FALSE,buf.xwid =2,buf.ywid=3)
+nndN_core<-nnIndex(finpines,id=paste("T",1:126,sep=""),N=4,smark="diameter",buffer=FALSE,buf.xwid =2,buf.ywid=3)
 nndN_core
-nndhN_core<-nnIndex(finpines,N=4,smark=c("diameter","height"),buffer=FALSE,buf.xwid =2,buf.ywid=3)
-nndN_core
+nndhN_core<-nnIndex(finpines,id=paste("T",1:126,sep=""),N=4,smark=c("diameter","height"),buffer=FALSE,buf.xwid =2,buf.ywid=3)
+nndhN_core
 
 ## Remove some points, and then identify the marks  of Nearest Neighbour
 nndN.rm_core<-nnIndex(finpines,id=paste("T",1:126,sep=""),
-              rm.id=c("T1","T3","T8","T9","T59","T60","T120"),
-              N=4,smark="diameter",buffer=FALSE,buf.xwid =2,buf.ywid=3)
+                      rm.id=c("T1","T3","T8","T9","T59","T60","T120"),
+                      N=4,smark="diameter",buffer=FALSE,buf.xwid =2,buf.ywid=3)
+# Warning:rm.id should be included in the id
 nndN.rm_core
+
 ## add some points, and then identify the marks  of Nearest Neighbour
 marks=data.frame(diameter=c(2.0,3.0,4.0,5.0,6.0),
                  height=c(2.5,3.5,4.5,5.5,6.5))
@@ -103,28 +106,30 @@ nndN.add_core<-nnIndex(finpines,id=paste("T",1:126,sep=""),
                        add.id=paste("NT",1:5,sep=""),
                        add.mark=marks,
                        N=4,smark="diameter",buffer=FALSE,buf.xwid =2,buf.ywid=3)
+# Warning:please ensure same variables in add.mark must with same colname of X$mark
 nndN.add_core
 
 
 #### Based on specific circular (R=5) of nearest neighbour####
 ## Basic usage
-nndR<-nnIndex(finpines,R=5,smark="diameter",buffer=TRUE,buf.xwid =2,buf.ywid=3)
+nndR<-nnIndex(finpines,id=paste("T",1:126,sep=""),R=5,smark="diameter",buffer=TRUE,buf.xwid =2,buf.ywid=3)
 nndR
-nndhR<-nnIndex(finpines,R=5,smark=c("diameter","height"),buffer=TRUE,
-        buf.xwid =2,buf.ywid=3)
+nndhR<-nnIndex(finpines,id=paste("T",1:126,sep=""),R=5,smark=c("diameter","height"),buffer=TRUE,
+               buf.xwid =2,buf.ywid=3)
 nndhR
 
 # Only the points in the core zone (Removed the points in the buffer zone)
-nndR_core<-nnIndex(finpines,R=5,smark="diameter",buffer=FALSE,buf.xwid =2,buf.ywid=3)
+nndR_core<-nnIndex(finpines,id=paste("T",1:126,sep=""),R=5,smark="diameter",buffer=FALSE,buf.xwid =2,buf.ywid=3)
 nndR_core
-nndhR_core<-nnIndex(finpines,R=5,smark=c("diameter","height"),buffer=FALSE,
-            buf.xwid =2,buf.ywid=3)
+nndhR_core<-nnIndex(finpines,id=paste("T",1:126,sep=""),R=5,smark=c("diameter","height"),buffer=FALSE,
+                    buf.xwid =2,buf.ywid=3)
 nndhR_core
 
 ## Remove some points, and then identify the marks  of Nearest Neighbour
 nndR.rm_core<-nnIndex(finpines,id=paste("T",1:126,sep=""),
-                        rm.id=c("T1","T3","T8","T9","T59","T60","T120"),
-                        R=5,smark="diameter",buffer=FALSE,buf.xwid =2,buf.ywid=3)
+                      rm.id=c("T1","T3","T8","T9","T59","T60","T120"),
+                      R=5,smark="diameter",buffer=FALSE,buf.xwid =2,buf.ywid=3)
+# Warning:rm.id should be included in the id
 nndR.rm_core
 
 ## add some points, and then identify the marks  of Nearest Neighbour
@@ -135,5 +140,6 @@ nndR.add_core<-nnIndex(finpines,id=paste("T",1:126,sep=""),
                        add.id=paste("NT",1:5,sep=""),
                        add.mark=marks,
                        R=5,smark="diameter",buffer=FALSE,buf.xwid =2,buf.ywid=3)
+# Warning:please ensure same variables in add.mark must with same colname of X$mark
 nndR.add_core
 }
