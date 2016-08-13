@@ -1,4 +1,4 @@
-rebild.ppp<-function(X,id=1:(X$n),rm.id=NULL,add.X=NULL,add.id=paste("add",1:(add.X$n),sep="")){
+rebuild.ppp<-function(X,id=1:(X$n),rm.id=NULL,add.X=NULL,add.id=paste("add",1:(add.X$n),sep="")){
   if(is.null(X$marks)){
     marks(X)=id
   }else{

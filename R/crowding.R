@@ -1,6 +1,6 @@
-mingling <-
+crowding <-
 function(x){
-  k<-length(which(x[2:5]!=x[1]))
+  k<-length(which(x>=0))
   if(k==0){m=0}
   if(k==1){m=0.25}
   if(k==2){m=0.5}
