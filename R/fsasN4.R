@@ -9,6 +9,7 @@ function(nnattri,match.fun,para=NULL){
     Icount<-table(I)
     Ifreq<- Icount/sum(Icount)
     meanI<-sum(t(Icount)*as.numeric(names(Icount)))/sum(Icount)
+    sdI<-sd(as.numeric(as.character(I)))
     list(result=cbind(nnattri,I),Icount=Icount,
-         Ifreq=Ifreq,meanI=meanI)
+         Ifreq=Ifreq,meanI=meanI,sdI=sdI)
   }
