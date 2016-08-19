@@ -33,23 +33,47 @@ M
 #Stand storey differation degree
 H<-fsasN4(nnindices$nnstorey,match.fun=differ)
 H
-#Tree dominance
-U<-fsasN4(nnindices$nndbh.cm,match.fun=dominance)
-U
 #Tree successional degree
 S<-fsasN4(nnindices$nngroup,match.fun=ideal,para="Climax")
 S
-#Tree biomass dominance
-B<-fsasN4(nnindices$nnbiomass.kg,match.fun=dominance)
-B
 #Tree quality ideal state
 Q<-fsasN4(nnindices$nnquality,match.fun=ideal,para=c("Excellent","Good"))
 Q
 #Tree corwding degree
-D<-fsasN4(nnoverlap(nnindices$nncrownwid.m,nnindices$nndist),match.fun=crowding)
-D
+C<-fsasN4(nnoverlap(nnindices$nncrownwid.m,nnindices$nndist),match.fun=crowding)
+C
 #Tree uniform angle index
-W<-fsasN4(nnangle(nnindices$nndist,nnindices$nnx,
-      nnindices$nny)$nnangle,match.fun=uniform.angle,para=72)
+W<-fsasN4(nnangle(nnindices$nndist,nnindices$nnx,nnindices$nny)$nnangle,
+          match.fun=uniform.angle,para=72)
 W
+#Tree dominance
+U<-fsasN4(nnindices$nndbh.cm,match.fun=dominance)
+U
+#Tree biomass dominance
+B<-fsasN4(nnindices$nnbiomass.kg,match.fun=dominance)
+B
+
+##Compute the structrue heterogeneity of index
+M.fsh<-fsh(M$result$Index,optm=1)
+M.fsh
+H.fsh<-fsh(H$result$Index,optm=1)
+H.fsh
+S.fsh<-fsh(S$result$Index,optm=1)
+S.fsh
+Q.fsh<-fsh(Q$result$Index,optm=1)
+Q.fsh
+C.fsh<-fsh(C$result$Index,optm=0.5)
+C.fsh
+W.fsh<-fsh(W$result$Index,optm=0.5)
+W.fsh
+U.fsh<-fsh(U$result$Index,optm=0)
+U.fsh
+B.fsh<-fsh(B$result$Index,optm=0)
+B.fsh
+
+##Compute total forest saptial structrue heterogeneity
+Total.fsh<-fsh(index=c(M$meanM,H$meanH,S$meanS,Q$meanQ,
+                 C$meanC,W$meanW,U$meanu,B$meanB),
+                 optm=c(1,1,1,1,0.5,0.5,0,0))
+Total.fsh
 }

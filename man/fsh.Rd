@@ -1,34 +1,27 @@
-\name{fsasN4}
-\alias{fsasN4}
+\name{fsh}
+\alias{fsh}
 \title{
-A body function to analyze the forest saptial structure.
+Forest spatial structure heterogeneity assessment
 }
 \description{
-The function provided a easy flexible funciton body to analyze the forest saptial structure.
+None
 }
 \usage{
-fsasN4(nnattri, match.fun, para = NULL)
+fsh(index, optm)
 }
 \arguments{
-  \item{nnattri}{
-  attributies of nearest neighbour
+  \item{index}{
+Actual value of forest spatial structure indices
 }
-  \item{match.fun}{
-  funcitons,such as "differ","dominance","ideal","uniform.angle","crowding","mingling",etc.
-}
-  \item{para}{
-  the parameter in the above match.fun
+  \item{optm}{
+Optimal value of forest spatial structure indices
 }
 }
 \value{
-result is the "nnmark" and,colum I is the sptial structre indices value
-Icount is the count distribution  of I
-Ifreq is the frequency distribution of I
-meanI is the average value of I
-data is the final point pattern
+Result of forest spatial structure heterogeneity assessment
 }
 \references{
-Gadow Kv, and Hui G. 2002. Characterizing forest spatial structure and diversity. Proc of the SUFOR international workshop: Sustainable forestry in temperate regions. p 20-30.
+None
 }
 \author{
 Zongzheng Chai, chaizz@126.com
@@ -65,4 +58,28 @@ U
 #Tree biomass dominance
 B<-fsasN4(nnindices$nnbiomass.kg,match.fun=dominance)
 B
+
+##Compute the structrue heterogeneity of index
+M.fsh<-fsh(M$result$Index,optm=1)
+M.fsh
+H.fsh<-fsh(H$result$Index,optm=1)
+H.fsh
+S.fsh<-fsh(S$result$Index,optm=1)
+S.fsh
+Q.fsh<-fsh(Q$result$Index,optm=1)
+Q.fsh
+C.fsh<-fsh(C$result$Index,optm=0.5)
+C.fsh
+W.fsh<-fsh(W$result$Index,optm=0.5)
+W.fsh
+U.fsh<-fsh(U$result$Index,optm=0)
+U.fsh
+B.fsh<-fsh(B$result$Index,optm=0)
+B.fsh
+
+##Compute total forest saptial structrue heterogeneity
+Total.fsh<-fsh(index=c(M$meanM,H$meanH,S$meanS,Q$meanQ,
+                 C$meanC,W$meanW,U$meanu,B$meanB),
+                 optm=c(1,1,1,1,0.5,0.5,0,0))
+Total.fsh
 }
