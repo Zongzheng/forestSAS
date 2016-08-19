@@ -30,7 +30,7 @@ Zongzheng Chai, chaizz@126.com
 data(tree.ppp)
 ##Get the tree attributies of nearest neighbour for calculation
 nnindices<-nnIndex(tree.ppp,N=4,
-                  smark=c("sp.code","dbh.cm","storey","crownwid.m","group",
+                   smark=c("sp.code","dbh.cm","storey","crownwid.m","group",
                            "biomass.kg","quality","x","y"),buffer=FALSE)
 
 #Species mingling
@@ -60,26 +60,26 @@ B<-fsasN4(nnindices$nnbiomass.kg,match.fun=dominance)
 B
 
 ##Compute the structrue heterogeneity of index
-M.fsh<-fsh(M$result$Index,optm=1)
+M.fsh<-fsh(M$result$index,optm=1)
 M.fsh
-H.fsh<-fsh(H$result$Index,optm=1)
+H.fsh<-fsh(H$result$index,optm=1)
 H.fsh
-S.fsh<-fsh(S$result$Index,optm=1)
+S.fsh<-fsh(S$result$index,optm=1)
 S.fsh
-Q.fsh<-fsh(Q$result$Index,optm=1)
+Q.fsh<-fsh(Q$result$index,optm=1)
 Q.fsh
-C.fsh<-fsh(C$result$Index,optm=0.5)
+C.fsh<-fsh(C$result$index,optm=0.5)
 C.fsh
-W.fsh<-fsh(W$result$Index,optm=0.5)
+W.fsh<-fsh(W$result$index,optm=0.5)
 W.fsh
-U.fsh<-fsh(U$result$Index,optm=0)
+U.fsh<-fsh(U$result$index,optm=0)
 U.fsh
-B.fsh<-fsh(B$result$Index,optm=0)
+B.fsh<-fsh(B$result$index,optm=0)
 B.fsh
 
 ##Compute total forest saptial structrue heterogeneity
-Total.fsh<-fsh(index=c(M$meanM,H$meanH,S$meanS,Q$meanQ,
-                 C$meanC,W$meanW,U$meanu,B$meanB),
-                 optm=c(1,1,1,1,0.5,0.5,0,0))
+Total.fsh<-fsh(index=c(M$meanI,H$meanI,S$meanI,Q$meanI,
+                       C$meanI,W$meanI,U$meanI,B$meanI),
+               optm=c(1,1,1,1,0.5,0.5,0,0))
 Total.fsh
 }
