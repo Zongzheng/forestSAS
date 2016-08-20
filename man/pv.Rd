@@ -1,10 +1,10 @@
-\name{fsh}
-\alias{fsh}
+\name{pv}
+\alias{pv}
 \title{
-Forest spatial structure heterogeneity assessment
+Preference value
 }
 \description{
-None
+A descriptive index to analyze the forest saptial structure indices
 }
 \usage{
 fsh(index, optm)
@@ -60,26 +60,29 @@ B<-fsasN4(nnindices$nnbiomass.kg,match.fun=dominance)
 B
 
 ##Compute the structrue heterogeneity of index
-M.fsh<-fsh(M$result$index,optm=1)
-M.fsh
-H.fsh<-fsh(H$result$index,optm=1)
-H.fsh
-S.fsh<-fsh(S$result$index,optm=1)
-S.fsh
-Q.fsh<-fsh(Q$result$index,optm=1)
-Q.fsh
-C.fsh<-fsh(C$result$index,optm=0.5)
-C.fsh
-W.fsh<-fsh(W$result$index,optm=0.5)
-W.fsh
-U.fsh<-fsh(U$result$index,optm=0)
-U.fsh
-B.fsh<-fsh(B$result$index,optm=0)
-B.fsh
+M.pv<-pv(M$result$index,optm=1)
+M.pv
+H.pv<-pv(H$result$index,optm=1)
+H.pv
+S.pv<-pv(S$result$index,optm=1)
+S.pv
+Q.pv<-pv(Q$result$index,optm=1)
+Q.pv
+C.pv<-pv(C$result$index,optm=0.5)
+C.pv
+W.pv<-pv(W$result$index,optm=0.5)
+W.pv
+U.pv<-pv(U$result$index,optm=0)
+U.pv
+B.pv<-pv(B$result$index,optm=0)
+B.pv
 
-##Compute total forest saptial structrue heterogeneity
-Total.fsh<-fsh(index=c(M$meanI,H$meanI,S$meanI,Q$meanI,
+##Compute total forest saptial structrue heterogeneity based on the average of indices preference value   
+PVA=mean(M.pv,H.pv,S.pv,Q.pv,C.pv,W.pv,U.pv,B.pv)
+
+##Compute total forest saptial structrue heterogeneity based on the preference value of indices average 
+APV<-pv(index=c(M$meanI,H$meanI,S$meanI,Q$meanI,
                        C$meanI,W$meanI,U$meanI,B$meanI),
                optm=c(1,1,1,1,0.5,0.5,0,0))
-Total.fsh
+APV
 }
