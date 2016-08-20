@@ -7,7 +7,7 @@ Preference value
 A descriptive index to analyze the forest saptial structure indices
 }
 \usage{
-fsh(index, optm)
+pv(index, optm)
 }
 \arguments{
   \item{index}{
@@ -79,6 +79,7 @@ B.pv
 
 ##Compute total forest saptial structrue heterogeneity based on the average of indices preference value   
 PVA=mean(M.pv,H.pv,S.pv,Q.pv,C.pv,W.pv,U.pv,B.pv)
+PVA
 
 ##Compute total forest saptial structrue heterogeneity based on the preference value of indices average 
 APV<-pv(index=c(M$meanI,H$meanI,S$meanI,Q$meanI,
