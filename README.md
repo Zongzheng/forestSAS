@@ -12,3 +12,7 @@ The development version from github:
 # install.packages("devtools")
 devtools::install_github("Zongzheng/forestSAS")
 ```
+
+##Citation
+
+Chai ZZ.2016.forestSAS, a R package for forest spatial structure analysis systems.URL:https://github.com/Zongzheng/forestSAS.
