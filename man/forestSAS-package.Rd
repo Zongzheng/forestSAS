@@ -72,12 +72,12 @@ B.pv<-pv(B$result$index,optm=0)
 B.pv
 
 ##Compute total forest saptial structrue heterogeneity based on the average of indices preference value   
-PVA=mean(M.pv,H.pv,S.pv,Q.pv,C.pv,W.pv,U.pv,B.pv)
-PVA
+IAVE=mean(M.pv,H.pv,S.pv,Q.pv,C.pv,W.pv,U.pv,B.pv)
+IAVE
 
 ##Compute total forest saptial structrue heterogeneity based on the preference value of indices average 
-APV<-pv(index=c(M$meanI,H$meanI,S$meanI,Q$meanI,
+IPVE<-pv(index=c(M$meanI,H$meanI,S$meanI,Q$meanI,
                        C$meanI,W$meanI,U$meanI,B$meanI),
                optm=c(1,1,1,1,0.5,0.5,0,0))
-APV
+IPVE
 }
