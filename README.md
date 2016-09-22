@@ -15,4 +15,4 @@ devtools::install_github("Zongzheng/forestSAS")
 
 ##Citation
 
-Chai ZZ.2016.forestSAS, An R package for forest spatial structure analysis systems.URL:https://github.com/Zongzheng/forestSAS.
+Chai ZZ.2016.forestSAS：An R package for forest spatial structure analysis systems.URL:https://github.com/Zongzheng/forestSAS.
