@@ -28,10 +28,11 @@ Zongzheng Chai, chaizz@126.com
 }
 \examples{
 data(tree.ppp)
-##Get the tree attributies of nearest neighbour for calculation
+##Get the tree attributies of nearest neighbour 
 nnindices<-nnIndex(tree.ppp,N=4,
-                   smark=c("sp.code","dbh.cm","storey","crownwid.m","group",
-                           "biomass.kg","quality","x","y"),buffer=FALSE)
+            smark=c("sp.code","dbh.cm","storey",
+               "crownwid.m","group","biomass.kg",
+               "quality","x","y"),buffer=FALSE)
 
 #Species mingling
 M<-fsasN4(nnindices$nnsp.code,match.fun=mingling)
@@ -43,13 +44,16 @@ H
 S<-fsasN4(nnindices$nngroup,match.fun=ideal,para="Climax")
 S
 #Tree quality ideal state
-Q<-fsasN4(nnindices$nnquality,match.fun=ideal,para=c("Excellent","Good"))
+Q<-fsasN4(nnindices$nnquality,match.fun=ideal,
+          para=c("Excellent","Good"))
 Q
 #Tree corwding degree
-C<-fsasN4(nnoverlap(nnindices$nncrownwid.m,nnindices$nndist),match.fun=crowding)
+C<-fsasN4(nnoverlap(nnindices$nncrownwid.m,
+         nnindices$nndist),match.fun=crowding)
 C
 #Tree uniform angle index
-W<-fsasN4(nnangle(nnindices$nndist,nnindices$nnx,nnindices$nny)$nnangle,
+W<-fsasN4(nnangle(nnindices$nndist,nnindices$nnx,
+           nnindices$nny)$nnangle,
           match.fun=uniform.angle,para=72)
 W
 #Tree dominance
@@ -77,13 +81,15 @@ U.pv
 B.pv<-pv(B$result$index,optm=0)
 B.pv
 
-##Compute total forest saptial structrue heterogeneity based on the average of indices preference value   
-IAVE=mean(M.pv,H.pv,S.pv,Q.pv,C.pv,W.pv,U.pv,B.pv)
-IAVE
-
-##Compute total forest saptial structrue heterogeneity based on the preference value of indices average 
-IPVE<-pv(index=c(M$meanI,H$meanI,S$meanI,Q$meanI,
+##Compute total forest saptial structrue heterogeneity 
+#based on the average of indices preference value 
+IAVE<-pv(index=c(M$meanI,H$meanI,S$meanI,Q$meanI,
                        C$meanI,W$meanI,U$meanI,B$meanI),
                optm=c(1,1,1,1,0.5,0.5,0,0))
+IAVE
+
+##Compute total forest saptial structrue heterogeneity 
+#based on the preference value of indices average 
+IPVE=mean(M.pv,H.pv,S.pv,Q.pv,C.pv,W.pv,U.pv,B.pv)
 IPVE
 }

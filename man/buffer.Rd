@@ -35,8 +35,8 @@ An object of class "ppp", which add a marks "zone" in the orginal point pattern
 }
 \references{
 Chai ZZ, Sun CL, Wang DX, Liu WZ, and Zhang CS.2016.
-Spatial structure and dynamics of predominant populations in a virgin old-growth
-oak forest in the Qinling Mountains, China. Scandinavian Journal of Forest Research. DOI:
+Spatial structure and dynamics of predominant populations in a virgin 
+old-growthoak forest in the Qinling Mountains, China. Scandinavian Journal of Forest Research. DOI:
 10.1080/02827581.2016.1183703
 }
 \author{

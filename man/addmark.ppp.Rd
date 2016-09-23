@@ -39,7 +39,7 @@ finpines.storey
 ####Computing the storey differation
 ##Add the storey mark for finepines
 finpines.addstorey<-addmarks.ppp(finpines,
-                      add.mark=finpines.storey$heightdata[,2:3],
-                            add.name=c("interval","storey" ))
+              add.mark=finpines.storey$heightdata[,2:3],
+                  add.name=c("interval","storey" ))
 finpines.addstorey
 }
