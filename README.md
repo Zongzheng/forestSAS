@@ -11,6 +11,8 @@ The development version from github:
 ```R
 # install.packages("devtools")
 devtools::install_github("Zongzheng/forestSAS")
+library(spatstat)
+library(forestSAS)
 ```
 
 ##Citation
