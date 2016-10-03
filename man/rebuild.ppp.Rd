@@ -7,7 +7,8 @@ Reestablishing an object of class "ppp"
 Reestablishing an object of class "ppp" by adding or removing some data from orginal point pattern (object of class "ppp")
 }
 \usage{
-rebuild.ppp(X, id = 1:(X$n), rm.id = NULL, add.X = NULL, add.id = paste("add", 1:(add.X$n), sep = ""))
+rebuild.ppp(X, id = 1:(X$n), rm.id = NULL, add.X = NULL,
+          add.id = paste("add", 1:(add.X$n), sep = ""))
 }
 \arguments{
   \item{X}{
@@ -39,6 +40,7 @@ Zongzheng Chai, chaizz@126.com
 R function ppp in the package "spatstat"
 }
 \examples{
+library(spatstat)
 ####Based on the simulated data####
 # Creating a simulated point pattern
 x <- runif(20)

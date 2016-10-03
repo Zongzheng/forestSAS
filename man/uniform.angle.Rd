@@ -1,12 +1,12 @@
 \name{uniform.angle}
 \alias{uniform.angle}
 \title{
-A forest spatial structure index characterizing tree spatial distribution
-patterns
+A forest spatial structure index characterizing tree spatial
+distribution patterns
 }
 \description{
-The uniform angle index (UAI) is used to characterize the spatial distribution of a forest community or of individual tree species within that community.By
-gradually comparing the included  4 angles with the standard angle (72°). 
+The uniform angle index (UAI) is used to characterize the spatial distribution of a forest community or of individual tree species
+within that community.By gradually comparing the included  4 angles with the standard angle (72).
 }
 \usage{
 uniform.angle(x, para)
@@ -16,12 +16,13 @@ uniform.angle(x, para)
 Moving clockwise around reference tree,4 angle were obtained among adjacent neighbours
 }
   \item{para}{
-standard angle (72°)
+standard angle (72)
 }
 }
 \value{
-Result will retrun five values,0,0.25,0.5,0.75,1,which means 
-none, one, two, three, or four angles are smaller than 72°, respectively.
+Result will retrun five values,0,0.25,0.5,0.75,1,which means
+none, one, two, three, or four angles are smaller than 72,
+respectively.
 }
 \references{
 Zhao ZH, Hui GY, Hu YB, Wang HX, Zhang GQ, and von Gadow K. 2014. Testing the significance of different tree spatial distribution patterns based on the uniform angle index. Canadian Journal of Forest Research 44:1419-1425.

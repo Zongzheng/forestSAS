@@ -4,8 +4,8 @@
 A forest spatial structure index characterizing tree dominance
 }
 \description{
-The tree attribute dominance was proposed by Hui et al. (1998) to relate the relative
-dominance of a given tree to its species or silvicultural significance. It is defined as the proportion of the n nearest neighbours of a given reference tree which are bigger than the reference tree.
+The tree attribute dominance was proposed by Hui et al. (1998) to relate the relative dominance of a given tree to its species or silvicultural significance. It is defined as the proportion of
+the n nearest neighbours of a given reference tree which are bigger than the reference tree.
 }
 \usage{
 dominance(x)
@@ -16,7 +16,7 @@ A vector composed by 5 tree attributes, such as dbh,biomass.
 }
 }
 \value{
-Result will retrun five values,0,0.25,0.5,0.75,1,which means the propertion of 
+Result will retrun five values,0,0.25,0.5,0.75,1,which means the propertion of
 the larger tree attributes in the 4 nearest neighbours than the reference tree.
 }
 \references{

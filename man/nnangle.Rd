@@ -26,7 +26,7 @@ y coordinate of nearest neighbour
 The angles obtained between two adjacent neighbours.
 }
 \references{
-
+None
 }
 \author{
 Zongzheng Chai, chaizz@126.com

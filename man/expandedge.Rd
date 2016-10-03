@@ -36,6 +36,7 @@ If xwidth or ywidth = 0, trees are returned unchanged.
 Zongzheng Chai, chaizz@126.com
 }
 \examples{
+library(spatstat)
 data(finpines)
 finpines$window
 # window: rectangle = [-5, 5] x [-8, 2] metres

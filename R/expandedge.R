@@ -1,5 +1,6 @@
 expandedge <-
 function(X,xwidth,ywidth,id=1:X$n){
+  library(spatstat)
   if(xwidth>X$window$xrange[2]-X$window$xrange[1])
     stop("xwidth beyond the xrange")
   if(ywidth>X$window$yrange[2]-X$window$yrange[1])

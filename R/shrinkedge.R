@@ -1,5 +1,6 @@
 shrinkedge <-
 function(X,xwidth,ywidth,id){
+  library(spatstat)
   if(xwidth>(X$window$xrange[2]-X$window$xrange[1])/2)
     stop("xwidth beyond the xrange")
   if(ywidth>(X$window$yrange[2]-X$window$yrange[1])/2)

@@ -1,6 +1,6 @@
 Package: forestSAS
 Type: Package
-Title: A R package for forest spatial structure analysis systems
+Title: An R package for forest spatial structure analysis systems
 Version: 0.1.0
 Author: Zongzheng Chai
 Maintainer: Zongzheng Chai <chaizz@126.com>
@@ -11,7 +11,8 @@ Description: In recent years, there has been considerable interest
        properly express the spatial structure characteristics of tree
        populations and forest communities and have strong operability
        for guiding forestry practices.forestSAS package provide more
-       important information and allow us to better understand and analyze
-       the fine-scale spatial structure of tree populations and stand structure.
+       important information and allow us to better understand and
+       analyze the fine-scale spatial structure of tree populations
+       and stand structure.
 License: GPL-2
 LazyData: TRUE

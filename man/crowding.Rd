@@ -5,7 +5,7 @@ A forest spatial structure index characterizing crowding degree
 }
 \description{
 Analyze the crowding degree of a neighborhood unit according to the overlapping of the
-crown in spatial micro-environment.which clearly define the crowding degree for a reference 
+crown in spatial micro-environment.which clearly define the crowding degree for a reference
 tree and its four nearest neighbors,and to some degree the competition pressure on it as well．
 }
 \usage{
@@ -17,13 +17,10 @@ A vector composed by 5 crowding degree value
 }
 }
 \value{
-Result will retrun five values,0,0.25,0.5,0.75,1,which means 
-none, one, two, three, or four overlap of nearest neighbors 
-with reference tree,respectively.
+Result will retrun five values,0,0.25,0.5,0.75,1,which means none, one, two, three, or four overlap of nearest neighbors with reference tree,respectively.
 }
 \references{
-Hu YB, Hui GY. 2015. How to describe the crowding degree of trees based on the 
-relationship of neighboring trees. Journal of Beijing Forestry University. 37(9):1-8.
+Hu YB, Hui GY. 2015. How to describe the crowding degree of trees based on the relationship of neighboring trees. Journal of Beijing Forestry University. 37(9):1-8.
 }
 \author{
 Zongzheng Chai, chaizz@126.com

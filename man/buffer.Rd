@@ -35,7 +35,7 @@ An object of class "ppp", which add a marks "zone" in the orginal point pattern
 }
 \references{
 Chai ZZ, Sun CL, Wang DX, Liu WZ, and Zhang CS.2016.
-Spatial structure and dynamics of predominant populations in a virgin 
+Spatial structure and dynamics of predominant populations in a virgin
 old-growthoak forest in the Qinling Mountains, China. Scandinavian Journal of Forest Research. DOI:
 10.1080/02827581.2016.1183703
 }
@@ -43,6 +43,7 @@ old-growthoak forest in the Qinling Mountains, China. Scandinavian Journal of Fo
 Zongzheng Chai, chaizz@126.com
 }
 \examples{
+library(spatstat)
 ####Based on the simulated data####
 # Creating a simulated point pattern
 x <- runif(20)

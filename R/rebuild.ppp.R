@@ -1,4 +1,5 @@
 rebuild.ppp<-function(X,id=1:(X$n),rm.id=NULL,add.X=NULL,add.id=paste("add",1:(add.X$n),sep="")){
+  library(spatstat)
   if(is.null(X$marks)){
     marks(X)=id
   }else{
@@ -18,7 +19,7 @@ rebuild.ppp<-function(X,id=1:(X$n),rm.id=NULL,add.X=NULL,add.id=paste("add",1:(a
     }else{
       marks(add.X)=data.frame(id=add.id,add.X$marks)
     }
-    newX<-superimpose(X,add.X)
-  } 
+    newX<-spatstat::superimpose(X,add.X)
+  }
   return(newX)
 }

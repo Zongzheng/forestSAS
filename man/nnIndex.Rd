@@ -3,8 +3,15 @@
 \title{
 Get the marks of nearest neighbour in the point pattern
 }
+\description{
+Get the marks of nearest neighbour in the point pattern
+}
 \usage{
-nnIndex(X, id = 1:(X$n), smark = NULL, N = NULL, R = NULL, rm.id = NULL, add.X = NULL, add.id = paste("add", 1:(add.X$n), sep = ""), buffer = FALSE, buf.xwid = 5, buf.ywid = 5, exclusion = FALSE)
+nnIndex(X, id = 1:(X$n), smark = NULL, N = NULL,
+        R = NULL, rm.id = NULL, add.X = NULL,
+        add.id = paste("add", 1:(add.X$n), sep = ""),
+        buffer = FALSE, buf.xwid = 5, buf.ywid = 5,
+        exclusion = FALSE)
 }
 \arguments{
   \item{X}{
@@ -63,6 +70,7 @@ Zongzheng Chai, chaizz@126.com
 The function "nnmark" in the package spatstat
 }
 \examples{
+library(spatstat)
 data(finpines)
 #### Based on specific number (N=4) of nearest neighbour####
 ## Basic usage
@@ -83,7 +91,7 @@ nndhN_core<-nnIndex(finpines,id=paste("T",1:126,sep=""),N=4,
          buf.ywid=3)
 nndhN_core
 
-## Remove some points, and then identify the marks  of Nearest Neighbour
+## Remove some points, and then identify the marks of Nearest Neighbour
 nndN.rm_core<-nnIndex(finpines,id=paste("T",1:126,sep=""),
                     rm.id=c("T1","T3","T8","T9","T59","T60","T120"),
             N=4,smark="diameter",buffer=FALSE,buf.xwid =2,buf.ywid=3)

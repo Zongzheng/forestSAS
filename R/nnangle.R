@@ -1,5 +1,6 @@
 nnangle <-
 function(nndist,nnx,nny){
+  library(spatstat)
   xl<-as.data.frame(t(apply(nnx,1,function(x)cbind(x[2:5]-x[1]))))
   yl<-as.data.frame(t(apply(nny,1,function(x)cbind(x[2:5]-x[1]))))
   data1<-as.matrix(acos(yl/nndist)*sign(xl)*180/pi+360)
