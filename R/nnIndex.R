@@ -12,7 +12,7 @@ nnIndex<-function (X, id = 1:(X$n), smark = NULL, N = NULL, R = NULL,
   nnid <- nnid(X = ppp, N = N, R = R, id = as.data.frame(ppp)$id, 
                exclude = FALSE)
   if (!is.null(N)) {
-    nndist <- spatstat::applynbd(X = ppp, N = N, function(dists, 
+    nndist <- spatstat.geom::applynbd(X = ppp, N = N, function(dists, 
                                                           ...) {
       sort(dists)
     }, exclude = TRUE)
@@ -24,11 +24,11 @@ nnIndex<-function (X, id = 1:(X$n), smark = NULL, N = NULL, R = NULL,
     }
   }
   if (!is.null(R)) {
-    minnndist = spatstat::minnndist(X = ppp)
-    if (R <= spatstat::minnndist(X = ppp)) 
+    minnndist = spatstat.geom::minnndist(X = ppp)
+    if (R <= spatstat.geom::minnndist(X = ppp)) 
       stop(paste("R must exceed the minimum nearest-neighbour distance (", 
                  minnndist, ")", sep = ""))
-    nndist <- spatstat::applynbd(X = ppp, R = R, function(dists, 
+    nndist <- spatstat.geom::applynbd(X = ppp, R = R, function(dists, 
                                                           ...) {
       sort(dists)
     }, exclude = TRUE)
