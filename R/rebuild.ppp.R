@@ -19,7 +19,7 @@ rebuild.ppp<-function(X,id=1:(X$n),rm.id=NULL,add.X=NULL,add.id=paste("add",1:(a
     }else{
       marks(add.X)=data.frame(id=add.id,add.X$marks)
     }
-    newX<-spatstat::superimpose(X,add.X)
+    newX<-spatstat.geom::superimpose(X,add.X)
   }
   return(newX)
 }

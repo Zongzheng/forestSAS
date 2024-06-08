@@ -7,7 +7,7 @@ function(nndist,nnx,nny){
   data1[which(data1>360)]<-data1[which(data1>360)]-360
   data2<-data.frame(id=rownames(nndist),N=rownames(nndist),data1)
   data3<-split(data2[,-c(which(colnames(data2)==c("id","N")))],list(data2$N))
-  data4<-as.data.frame(t(sapply((lapply(data3,sort)),as.matrix)))
+  data4<-as.data.frame(t(sapply(lapply(data3,function(x) sort(as.numeric(x))),as.matrix)))
   data5<-data4[rownames(nndist),]
   names(data5)<-c("A1","A2","A3","A4")
   angle1<-data5$A2-data5$A1
