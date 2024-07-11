@@ -9,7 +9,7 @@ A sample data of field survey, to help us understanding the method of forest spa
 }
 \usage{data("tree.ppp")}
 \details{
-The function "ppp" in the package spatstat
+The function "ppp" in the package spatstat.geom
 }
 \references{
 None

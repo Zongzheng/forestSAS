@@ -43,7 +43,7 @@ old-growthoak forest in the Qinling Mountains, China. Scandinavian Journal of Fo
 Zongzheng Chai, chaizz@126.com
 }
 \examples{
-library(spatstat)
+library(spatstat.geom)
 ####Based on the simulated data####
 # Creating a simulated point pattern
 x <- runif(20)
@@ -58,6 +58,7 @@ X_buf
 as.data.frame(X_buf)
 
 ####Based on the example data####
+library(spatstat.data)
 data(finpines)
 finpines
 # Marked planar point pattern: 126 points

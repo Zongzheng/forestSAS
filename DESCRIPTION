@@ -1,11 +1,12 @@
 Package: forestSAS
 Type: Package
-Title: An R package for forest spatial structure analysis systems
-Version: 0.1.0
+Title: Forest spatial structure analysis systems
+Version: 2.0.3
 Author: Zongzheng Chai
 Maintainer: Zongzheng Chai <chaizz@126.com>
-Depends: R (>= 3.3.0)
-Imports:spatstat
+Depends: R (>= 4.2.2)
+Imports:spatstat, spatstat.data (>= 3.0), spatstat.geom (>= 3.0),
+        ggplot2(>= 3.4), ggimage(>= 0.3),shiny(>= 1.7)
 Description: In recent years, there has been considerable interest
        in a group of neighborhood-based structural parameters that
        properly express the spatial structure characteristics of tree

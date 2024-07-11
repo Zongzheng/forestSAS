@@ -46,6 +46,7 @@ finpines.idN4<-nnid(finpines,id=paste("T",1:finpines$n),N=4,exclude=FALSE)
 finpines.idN4
 
 #Find the id of the nearest neighbour within a certain radius without id
+data(tree.ppp)
 finpines.rmidR0.5<-nnid(tree.ppp,id=paste("T",1:41),R=0.5)
 finpines.rmidR0.5
 

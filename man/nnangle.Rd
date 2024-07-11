@@ -4,9 +4,7 @@
 Identify the angle among nearest neighbours
 }
 \description{
-Describes the degree of regularity in the spatial distribution of n trees that
-are nearest to a reference tree. Moving clockwise
-around reference tree,the angle was obtained between two adjacent neighbours.
+Describes the degree of regularity in the spatial distribution of n trees that are nearest to a reference tree. Moving clockwise around reference tree,the angle was obtained between two adjacent neighbours.
 }
 \usage{
 nnangle(nndist, nnx, nny)
@@ -32,6 +30,7 @@ None
 Zongzheng Chai, chaizz@126.com
 }
 \examples{
+data(tree.ppp)
 NNcoord<-nnIndex(tree.ppp,N=4,smark=c("x","y"),buffer=FALSE)
 NNangle<-nnangle(NNcoord$nndist,NNcoord$nnx,NNcoord$nny)
 NNangle

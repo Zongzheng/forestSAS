@@ -9,7 +9,6 @@ Sometimes, the window of point pattern is too large, we can shrink its edges to 
 \usage{
 shrinkedge(X, xwidth, ywidth, id)
 }
-%- maybe also 'usage' for other objects documented here.
 \arguments{
   \item{X}{
 A point pattern (object of class "ppp").
@@ -28,14 +27,14 @@ Specific identification number of the points in the point pattern.
 When expanding for the full pattern, and using expandedge() with a positive  xwidth and ywidth; conversely, shrinking for the full pattern, and using shrinkedge () with a negative xwidth and ywidth,the parts of the pattern that are at a distance less than -width from an edge are discarded.
 }
 \value{
-Result returns original data (not a a point pattern with the same structure as trees), id is new id of points after edges expanded and old.id is orginal id of points.
+Result returns original data (not a point pattern with the same structure as trees), id is new id of points after edges expanded and old.id is orginal id of points.
 If xwidth or ywidth = 0, trees are returned unchanged.
 }
 \author{
 Zongzheng Chai, chaizz@126.com
 }
 \examples{
-library(spatstat)
+library(spatstat.data)
 data(finpines)
 finpines$window
 # window: rectangle = [-5, 5] x [-8, 2] metres

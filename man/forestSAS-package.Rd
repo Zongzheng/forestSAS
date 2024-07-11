@@ -19,7 +19,7 @@ None
 }
 \examples{
 data(tree.ppp)
-##Get the tree attributies of nearest neighbour 
+##Get the tree attributies of nearest neighbour
 nnindices<-nnIndex(tree.ppp,N=4,
             smark=c("sp.code","dbh.cm","storey",
                "crownwid.m","group","biomass.kg",
@@ -72,15 +72,15 @@ U.pv
 B.pv<-pv(B$result$index,optm=0)
 B.pv
 
-##Compute total forest saptial structrue heterogeneity 
-#based on the average of indices preference value 
+##Compute total forest saptial structrue heterogeneity
+#based on the average of indices preference value
 IAVE<-pv(index=c(M$meanI,H$meanI,S$meanI,Q$meanI,
                        C$meanI,W$meanI,U$meanI,B$meanI),
                optm=c(1,1,1,1,0.5,0.5,0,0))
 IAVE
 
-##Compute total forest saptial structrue heterogeneity 
-#based on the preference value of indices average 
+##Compute total forest saptial structrue heterogeneity
+#based on the preference value of indices average
 IPVE=mean(M.pv,H.pv,S.pv,Q.pv,C.pv,W.pv,U.pv,B.pv)
 IPVE
 }

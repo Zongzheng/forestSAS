@@ -9,7 +9,6 @@ When computing forest spatial structure indices, The trees near the edges of the
 \usage{
 expandedge(X, xwidth, ywidth, id = 1:X$n)
 }
-%- maybe also 'usage' for other objects documented here.
 \arguments{
   \item{X}{
 A point pattern (object of class "ppp").
@@ -36,7 +35,7 @@ If xwidth or ywidth = 0, trees are returned unchanged.
 Zongzheng Chai, chaizz@126.com
 }
 \examples{
-library(spatstat)
+library(spatstat.data)
 data(finpines)
 finpines$window
 # window: rectangle = [-5, 5] x [-8, 2] metres

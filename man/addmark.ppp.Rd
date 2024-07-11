@@ -30,17 +30,16 @@ None
 Zongzheng Chai, chaizz@126.com
 }
 \examples{
-library(spatstat)
+library(spatstat.data)
 data(finpines)
-finpinesdata<-as.data.frame(finpines)
 ####Dividing the stories
-finpines.storey<-storeydvd(finpinesdata$height,storeynum=6)
+finpines.storey<-storeydvd(finpines$marks$height,storeynum=6)
 finpines.storey
 
 ####Computing the storey differation
 ##Add the storey mark for finepines
 finpines.addstorey<-addmark.ppp(finpines,
-        add.mark=finpines.storey$heightdata[,2:3],
-                  add.name=c("interval","storey" ))
+                                add.mark=finpines.storey$heightdata[,2:3],
+                                add.name=c("interval","storey" ))
 finpines.addstorey
 }

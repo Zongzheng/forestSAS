@@ -40,7 +40,7 @@ Zongzheng Chai, chaizz@126.com
 R function ppp in the package "spatstat"
 }
 \examples{
-library(spatstat)
+library(spatstat.geom)
 ####Based on the simulated data####
 # Creating a simulated point pattern
 x <- runif(20)
@@ -70,6 +70,7 @@ XY
 as.data.frame(XY)
 
 ####Based on the example data####
+library(spatstat.data)
 data(finpines)
 finpines
 # Marked planar point pattern: 126 points

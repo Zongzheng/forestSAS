@@ -4,8 +4,7 @@
 Dividing the forest storeies
 }
 \description{
-Forest overstory can be divided the many stories by dividing the range of
-tree height.
+Forest overstory can be divided the many stories by dividing the range of tree height.
 }
 \usage{
 storeydvd(height, minH = min(height), maxH = max(height),
@@ -25,7 +24,7 @@ Maximum value of height
 Number of storey
 }
   \item{include.lowest}{
-Logical, indicating if an ‘x[i]’ equal to the lowest (or highest, for right = FALSE) ‘breaks’ value should be included.See the function "cut".
+Logical, indicating if an "[i]" equal to the lowest (or highest, for right=FALSE) "breaks" value should be included. See the function "cut".
 }
   \item{right}{
 Logical, indicating if the intervals should be closed on the right (and open on the left) or vice versa.See the function "cut".

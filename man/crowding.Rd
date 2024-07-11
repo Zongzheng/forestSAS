@@ -1,12 +1,10 @@
 \name{crowding}
 \alias{crowding}
 \title{
-A forest spatial structure index characterizing crowding degree
+A forest spatial structure index characterizing crowding degree.
 }
 \description{
-Analyze the crowding degree of a neighborhood unit according to the overlapping of the
-crown in spatial micro-environment.which clearly define the crowding degree for a reference
-tree and its four nearest neighbors,and to some degree the competition pressure on it as well．
+Analyze the crowding degree of a neighborhood unit according to the overlapping of the crown in spatial micro-environment which clearly define the crowding degree for a reference tree and its four nearest neighbors, and to some degree of the competition pressure on it as well.
 }
 \usage{
 crowding(x)
